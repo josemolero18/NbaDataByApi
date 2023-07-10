@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import { Stats, HomeComponent, Navbar, Oeste, SearchTeam } from "../pages/index";
+import { Navbar } from "../components/Navbar";
+import { Stats, HomeComponent, Oeste, SearchTeam } from "../pages/index";
 
 export const NbaDataByAPIRoute = () => {
   return (
-    <div className="min-vh-100">
+    <div className="mb-5" style={{ background: '#FFFAFA' }} >
       <Navbar />
 
       <div className="container" >

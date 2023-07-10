@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from '../components/Card';
+import { Carousel, NextGames} from '../components/index';
+// import { Trade } from '../components/Trade';
 import { useDataByAPI } from '../hooks/useDataByAPI';
+import { UseYoutubeData } from '../hooks/useYoutubeData';
 
 export const HomeComponent = () => {
   const data = useDataByAPI();
@@ -12,15 +14,18 @@ export const HomeComponent = () => {
 
   return (
     <div>
-      {isLoading ? (
-        <div><h1>Cargando...</h1></div>
-      ) : (
-        <div className='row mt-4'>
-          {data.map((team) => (
-            <Card team={team} key={team.id}/>
-          ))}
+      <div className="row">
+        <div className="col-lg-8 col-sm-12 col-md-8">
+          <Carousel/>
         </div>
-      )}
-    </div>
+        <div className="col-lg-4 col-sm-12 col-md-4">
+          {isLoading ? (
+            <div>Cargando...</div>
+          ) : (
+            <NextGames />
+          )}
+        </div>
+      </div>
+      </div>
   );
 };

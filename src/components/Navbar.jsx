@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from "../assets/logo.png"
 
 export const Navbar = () => {
 
@@ -7,10 +8,7 @@ export const Navbar = () => {
     <nav className="navbar bg-dark border-bottom border-bottom-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <div className='d-flex '>
-            <h3 className='text-primary'> NBA</h3> 
-            <h3 className='ms-1 text-danger'> Data</h3>
-            </div>
+          <img src={logoImage} alt="logo"  width="100" height="50" />
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -18,16 +16,16 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/">All Teams</Link>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/SearchTeam">Search Team</Link>
+              <Link className="nav-link" to="/SearchTeam">Teams</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Stats">Standings</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Oeste">Conference West</Link>
+              <Link className="nav-link" to="/Oeste">Players</Link>
             </li>
           </ul>
           <ul className="navbar-nav ms-auto">

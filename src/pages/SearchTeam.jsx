@@ -25,8 +25,6 @@ export const SearchTeam = () => {
   }, [dataAtlantic,dataCentral, dataNorthwest, dataPacific, dataSoutheast,dataSouthwest]);
   
 
-  console.log(dataCentral);
-
   return (
     <div className="row mt-2 rounded bg-light">
 

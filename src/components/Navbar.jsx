@@ -25,7 +25,7 @@ export const Navbar = () => {
               <Link className="nav-link" to="/Stats">Standings</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Oeste">Players</Link>
+              <Link className="nav-link" to="/Oeste">Result</Link>
             </li>
           </ul>
           <ul className="navbar-nav ms-auto">

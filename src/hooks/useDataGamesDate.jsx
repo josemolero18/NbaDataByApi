@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-export const useDataStanding = (conference) => {
+export const useDataGamesDate = (date) => {
+
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
       try {
         const response = await fetch(
-        `https://v2.nba.api-sports.io/standings?league=standard&season=2022&conference=${conference}`,
+        `https://v2.nba.api-sports.io/games?date=${date}`,
           {
             method: "GET",
             headers: {
@@ -18,9 +19,7 @@ export const useDataStanding = (conference) => {
         const jsonData = await response.json();
         setData(jsonData.response);
       } catch (error) {
-        <div>
-          <p>La solicitud no fue Valida : {error}</p>
-        </div>
+        console.log("La solicitud no fue válida: Hola" + error);
       }
     };
   
@@ -28,5 +27,7 @@ export const useDataStanding = (conference) => {
       fetchData();
     }, []);
   
+    console.log(data);
+
     return data;
 }

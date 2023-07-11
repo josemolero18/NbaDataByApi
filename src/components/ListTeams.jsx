@@ -17,8 +17,8 @@ export const ListTeams = ({ game }) => {
   if (isLoading) {
     return (
       <div className="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="sr-only"></span>
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
         </div>
       </div>
     ); // Mostrar un mensaje de carga mientras isLoading es verdadero

@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const useDataGamesDate = (date) => {
-
-    const [data, setData] = useState([]);
-
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-        `https://v2.nba.api-sports.io/games?date=${date}`,
+          `https://v2.nba.api-sports.io/games?date=${date}`,
           {
             method: "GET",
             headers: {
@@ -17,17 +15,13 @@ export const useDataGamesDate = (date) => {
           }
         );
         const jsonData = await response.json();
-        setData(jsonData.response);
+        console.log(jsonData.response); // Muestra los datos en la consola
+        // Aquí puedes hacer cualquier otra manipulación de los datos si es necesario
       } catch (error) {
-        console.log("La solicitud no fue válida: Hola" + error);
+        console.log("La solicitud no fue válida: " + error);
       }
     };
-  
-    useEffect(() => {
-      fetchData();
-    }, []);
-  
-    console.log(data);
 
-    return data;
-}
+    fetchData();
+  }, [date]);
+};

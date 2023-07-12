@@ -8,19 +8,13 @@ const MyCalendar = () => {
 
   //2 hooks para obtener la fecha y la hora
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [formatedDate, setFormatedDate] = useState("");
 
-
-  //hook con el que hare la peticion
-  const [data, setData] = useState();
-
+  console.log(formatedDate);
   
-  const request = useDataGamesDate("2023-05-12");
+  const request = useDataGamesDate(formatedDate);
 
-  const loadingApp = () =>{
-    setData(request);
-  }
-
-  console.log(data);
+  console.log(request);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -28,12 +22,13 @@ const MyCalendar = () => {
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     const formattedDate = `${year}-${month}-${day}`;
+    setFormatedDate(formattedDate);
   };
   
 
   useEffect(() => {
 
-  }, []);
+  }, [selectedDate]);
 
   return (
     <div>

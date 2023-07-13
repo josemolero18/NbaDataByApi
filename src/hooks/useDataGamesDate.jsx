@@ -25,6 +25,6 @@ export const useDataGamesDate = (date) => {
   
     useEffect(() => {
       fetchData();
-    }, [date]);
+    }, [date,data]);
     return data;
 }

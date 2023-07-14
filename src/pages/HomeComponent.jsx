@@ -14,16 +14,12 @@ export const HomeComponent = () => {
 
   return (
     <div>
-      <div className="row">
+      <div className="row" style={{ minHeight: "84vh"}}>
         <div className="col-lg-8 col-sm-12 col-md-8">
           <Carousel/>
         </div>
         <div className="col-lg-4 col-sm-12 col-md-4">
-          {isLoading ? (
-            <div>Cargando...</div>
-          ) : (
-            <NextGames />
-          )}
+          <NextGames/>
         </div>
       </div>
       </div>

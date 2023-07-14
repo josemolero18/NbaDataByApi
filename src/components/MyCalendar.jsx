@@ -24,7 +24,7 @@ const MyCalendar = () => {
 
   return (
     <div>
-      <div className="row">
+      <div className="row" style={{ minHeight: "84vh"}}>
         <div className="col-9">
           <div className="container-fluid">
             {data?.map((game) => (
@@ -113,7 +113,7 @@ const MyCalendar = () => {
                   </div>
                   <div className="col-3">
                   <h5>{game.arena.name}</h5> 
-                    <p>{game.arena.city}</p>
+                    <p>{game.arena.city}, {game.arena.state}</p>
                   </div>
                 </div>
               </div>

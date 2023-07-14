@@ -28,7 +28,7 @@ export const SearchTeam = () => {
   return (
     <div className="row mt-2 rounded bg-light">
 
-      <div className="row d-flex justify-content-center">
+      <div className="row d-flex justify-content-center mb-4">
         <div className="col-6 col-md-6 mt-4 ">
             <h2>Atlantic</h2>
             <hr />

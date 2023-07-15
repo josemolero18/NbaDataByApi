@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Carousel, NextGames} from '../components/index';
-// import { Trade } from '../components/Trade';
+import { Carousel, Aside, MainNews} from '../components/index';
 import { useDataByAPI } from '../hooks/useDataByAPI';
-import { UseYoutubeData } from '../hooks/useYoutubeData';
 
 export const HomeComponent = () => {
   const data = useDataByAPI();
@@ -17,10 +15,11 @@ export const HomeComponent = () => {
       <div className="row" style={{ minHeight: "84vh"}}>
         <div className="col-lg-8 col-sm-12 col-md-8">
           <Carousel/>
+          <MainNews/>
         </div>
-        <div className="col-lg-4 col-sm-12 col-md-4">
-          <NextGames/>
-        </div>
+        <aside className="col-lg-4 col-sm-12 col-md-4">
+          <Aside/>
+        </aside>
       </div>
       </div>
   );

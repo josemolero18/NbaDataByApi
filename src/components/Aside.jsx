@@ -1,5 +1,5 @@
 
-export const NextGames = () => {
+export const Aside = () => {
   
 
   return (

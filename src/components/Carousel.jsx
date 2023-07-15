@@ -5,7 +5,7 @@ import hardenImage from "../assets/harden.jpg";
 
 export const Carousel = () => {
   return (
-    <div id="carouselExampleDark" className="carousel carousel-dark slide mt-3">
+    <div id="carouselExampleDark" className="carousel carousel-dark slide mt-3 rounded w-75">
       <div className="carousel-indicators">
         <button
           type="button"
@@ -31,7 +31,7 @@ export const Carousel = () => {
       <div className="carousel-inner">
         <div className="carousel-item active" data-bs-interval="10000">
           <div className="d-block w-100">
-            <img src={wembiImage} className="d-block w-100 animate__animated animate__slideInDown" alt="..." style={{
+            <img src={wembiImage} className="d-block rounded w-75 mx-auto animate__animated animate__slideInDown" alt="..." style={{
               background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
               opacity: 0.9,
             }} />
@@ -42,7 +42,7 @@ export const Carousel = () => {
           </div>
         </div>
         <div className="carousel-item" data-bs-interval="2000">
-          <img src={twinsImage} className="d-block w-100 animate__animated animate__slideInLeft" alt="..." style={{
+          <img src={twinsImage} className="d-block rounded w-75 animate__animated animate__slideInLeft" alt="..." style={{
               background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
               opacity: 0.9,
             }}/>
@@ -52,7 +52,7 @@ export const Carousel = () => {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={hardenImage} className="d-block w-100 animate__animated animate__slideInRight" alt="..." style={{
+          <img src={hardenImage} className="d-block rounded w-75 animate__animated animate__slideInRight" alt="..." style={{
               background: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
               opacity: 0.9,
             }}

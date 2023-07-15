@@ -5,7 +5,7 @@ import { Stats, HomeComponent, Oeste, SearchTeam } from "../pages/index";
 
 export const NbaDataByAPIRoute = () => {
   return (
-    <div style={{ background: '#FFFAFA' }} >
+    <div style={{ background: '#edeef0' }} >
       <Navbar />
 
       <div className="container" >

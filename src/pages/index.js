@@ -1,5 +1,5 @@
 export * from "./HomeComponent";
-export * from "./Oeste";
-export * from "./SearchTeam";
+export * from "./Calendar";
+export * from "./Teams";
 export * from "./Stats";
 export * from "./Tableposition";

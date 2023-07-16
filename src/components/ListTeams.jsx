@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import spinnerSvg from "../assets/Dual Ring-1s-200px.svg";
+import { Link } from "react-router-dom";
 
 export const ListTeams = ({ game }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +39,9 @@ export const ListTeams = ({ game }) => {
               <h5 className="mb-0 ms-1">{game.name}</h5>
               <small className="mt-0">
                 <p className="m-0">
-                  <strong>City:</strong> {game.city} |{" "}
+                  <strong>
+                    <Link to={`/teams/${game.id}`}>Players</Link>
+                  </strong>
                   <strong>Nickname:</strong> {game.nickname} |{" "}
                   <strong>Conference:</strong>{" "}
                   {game.leagues.standard.conference} |{" "}
@@ -55,3 +57,4 @@ export const ListTeams = ({ game }) => {
 };
 
 export default ListTeams;
+

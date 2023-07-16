@@ -11,8 +11,8 @@ export const Aside = () => {
         <h6 className=" pt-2 text-dark">Titulares</h6>
         <hr />
 
-        <ul>
-          <li style={{ listStyleType: "circle", fontSize: "3px" }}>
+        <ul className="ms-0 ps-3">
+          <li  style={{ listStyleType: "circle", fontSize: "3px" }}>
             <a
               className="text-decoration-none fs-6"
               style={{ fontSize: "3px", color: "#666" }}

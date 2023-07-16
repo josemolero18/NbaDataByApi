@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ListTeams } from "../components/ListTeams";
 import { useDataByAPI } from "../hooks/useDataByAPI";
 
-export const SearchTeam = () => {
+export const Teams = () => {
   
   const [Allteams, setAllteams] = useState([]);
 

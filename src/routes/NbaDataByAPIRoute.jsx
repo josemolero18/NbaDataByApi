@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import { Stats, HomeComponent, Oeste, SearchTeam } from "../pages/index";
+import { TeamDetails } from "../components/TeamDetails";
+import { Stats, HomeComponent, Calendar, Teams } from "../pages/index";
 
 export const NbaDataByAPIRoute = () => {
   return (
@@ -12,8 +13,9 @@ export const NbaDataByAPIRoute = () => {
         <Routes>
           <Route path="/" element={<HomeComponent />} />
           <Route path="/Stats" element={<Stats />} />
-          <Route path="/Oeste" element={<Oeste />} />
-          <Route path="/SearchTeam" element={<SearchTeam />} />
+          <Route path="/Calendar" element={<Calendar />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/teams/:teamId" element={<TeamDetails/>} />
         </Routes>
 
       </div>

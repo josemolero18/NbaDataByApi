@@ -1,6 +1,6 @@
 import MyCalendar from "../components/MyCalendar";
 
-export const Oeste = () => {
+export const Calendar = () => {
   return (
     <MyCalendar/>
   )

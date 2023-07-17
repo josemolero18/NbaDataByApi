@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { ListTeams } from "../components/ListTeams";
-import { useDataByAPI } from "../hooks/useDataByAPI";
+import { Aside, ListTeams } from "../components/";
+import { useDataByAPI } from "../hooks/";
 
 export const Teams = () => {
   
@@ -28,7 +28,8 @@ export const Teams = () => {
   return (
     <div className="row mt-2 rounded bg-light">
 
-      <div className="row d-flex justify-content-center mb-4">
+     <div className="col-9">
+     <div className="row d-flex justify-content-center mb-4">
         <div className="col-6 col-md-6 mt-4 ">
             <h2>Atlantic</h2>
             <hr />
@@ -74,6 +75,11 @@ export const Teams = () => {
             ))}
         </div>
       </div>
+     </div>
+
+     <aside className="col-3">
+              <Aside/>
+     </aside>
     </div>
   );
 };

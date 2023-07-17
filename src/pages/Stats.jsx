@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDataStanding } from "../hooks/useDataStanding";
+import { useDataStanding } from "../hooks/";
 
 export const Stats = () => {
 

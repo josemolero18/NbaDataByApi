@@ -39,13 +39,9 @@ export const ListTeams = ({ game }) => {
               <h5 className="mb-0 ms-1">{game.name}</h5>
               <small className="mt-0">
                 <p className="m-0">
-                  <strong>
-                    <Link to={`/teams/${game.id}`}>Players</Link>
-                  </strong>
-                  <strong>Nickname:</strong> {game.nickname} |{" "}
-                  <strong>Conference:</strong>{" "}
-                  {game.leagues.standard.conference} |{" "}
-                  <strong>Division:</strong> {game.leagues.standard.division}
+                    <Link className="text-decoration-none text-primary custom-font" to={`/teams/players/${game.id}`}>Players</Link> |
+                    <Link className="text-decoration-none text-primary custom-font" to={`/teams/statistics/${game.id}`}> Statistics</Link> | 
+  
                 </p>
               </small>
             </div>

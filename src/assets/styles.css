@@ -31,4 +31,9 @@
   .team-info-item {
     margin-bottom: 5px;
   }
+
+  .custom-font {
+    font-size: 12px; /* Ajusta el tamaño de fuente según tu preferencia */
+    font-family: 'Arial', sans-serif; /* Reemplaza 'Arial' con la fuente que desees usar */
+  }
   

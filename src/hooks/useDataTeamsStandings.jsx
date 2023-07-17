@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-export const useDataStanding = (conference) => {
-    const [data, setData] = useState([]);
+export const useDataTeamsStandings = (id) => {
+
+    const [data, setData] = useState();
 
     const fetchData = async () => {
       try {
         const response = await fetch(
-        `https://v2.nba.api-sports.io/standings?league=standard&season=2022&conference=${conference}`,
+        `https://v2.nba.api-sports.io/teams/statistics?id=${id}&season=2022`,
           {
             method: "GET",
             headers: {
@@ -18,17 +19,12 @@ export const useDataStanding = (conference) => {
         const jsonData = await response.json();
         setData(jsonData.response);
       } catch (error) {
-        <div>
-          <p>La solicitud no fue Valida : {error}</p>
-        </div>
+        console.log("La solicitud no fue válida: Hola" + error);
       }
     };
   
     useEffect(() => {
       fetchData();
-    }, []);
-  
+    }, [id]);
     return data;
 }
-
-export default useDataStanding;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { useDataGamesDate } from '../hooks/useDataGamesDate';
+import { useDataGamesDate } from '../hooks';
 
-const MyCalendar = () => {
+export const MyCalendar = () => {
   const initialValue = 'Jun 13 2023';
   const [selectedDate, setSelectedDate] = useState(new Date(initialValue));
   const [formatedDate, setFormatedDate] = useState(selectedDate);
@@ -132,5 +132,4 @@ const MyCalendar = () => {
     </div>
   );
 };
-
 export default MyCalendar;

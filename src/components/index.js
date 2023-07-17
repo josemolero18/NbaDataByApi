@@ -1,5 +1,12 @@
-export * from "./ListTeams"
+
 export * from "../components/Carousel"
 export * from "../components/Navbar"
 export * from "../components/Aside"
+export * from "../components/CardGames"
+export * from "../components/Footer"
+export * from "../components/ListTeams"
 export * from "../components/MainNews"
+export * from "../components/MyCalendar"
+export * from "../components/PlayerDetails"
+export * from "../components/TeamStatics"
+export * from "../components/TeamNameCard"

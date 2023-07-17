@@ -1,4 +1,6 @@
 export * from "../hooks/useDataByAPI"
 export * from "../hooks/useDataGames"
 export * from "../hooks/useDataStanding"
+export * from "../hooks/useDataGamesDate"
 export * from "../hooks/useDataPlayersTeam"
+export * from "../hooks/useDataTeamsStandings"

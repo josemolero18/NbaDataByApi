@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel, Aside, MainNews} from '../components/index';
-import { useDataByAPI } from '../hooks/useDataByAPI';
+import { useDataByAPI } from '../hooks/';
 
 export const HomeComponent = () => {
   const data = useDataByAPI();
